@@ -5,7 +5,7 @@ function getCookie(cname) {
   const cookieArray = decodedCookie.split(";");
   for (let c of cookieArray) {
     c = c.trim();
-    if (c.indexOf(name) === 0) {
+    if (c.indexOf(sessionId) === 0) {
       return c.substring(name.length);
     }
   }
