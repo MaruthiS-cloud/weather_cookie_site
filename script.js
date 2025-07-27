@@ -5,8 +5,8 @@ function getCookie(cname) {
   const cookieArray = decodedCookie.split(";");
   for (let c of cookieArray) {
     c = c.trim();
-    if (c.indexOf(sessionId) === 0) {
-      return c.substring(sessionId.length);
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length);
     }
   }
   return "";
@@ -19,7 +19,7 @@ function showCookieInfo() {
     // Cookie found – display it
     const info = JSON.parse(cookieValue);
     return `<h2>Your stored information</h2>
-            <p><strong>Session Id:</strong> ${info.sessionId}</p>
+            <p><strong>Name:</strong> ${info.name}</p>
             <p><strong>Favourite colour:</strong> ${info.favoriteColor}</p>`;
   }
   // Return empty string if no cookie
