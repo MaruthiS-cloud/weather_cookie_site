@@ -36,7 +36,7 @@ async function getWeather() {
         const { latitude, longitude } = position.coords;
         try {
           // Replace YOUR_API_KEY with your OpenWeatherMap key
-          const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=YOUR_API_KEY&units=metric`;
+          const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=1e3aa51702f19666e7638eed164d84b6units=metric`;
           const res = await fetch(url);
           const data = await res.json();
           resolve(data);
